@@ -9,9 +9,9 @@ type CustomEventDetail = {
 };
 
 export abstract class KucBase extends LitElement {
-  public createRenderRoot() {
-    return this;
-  }
+  // public createRenderRoot() {
+  //   return this;
+  // }
 }
 
 export const dispatchCustomEvent = (

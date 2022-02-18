@@ -42,6 +42,32 @@ storiesOf("desktop/button", module)
     disabledButton.addEventListener("click", event => {
       console.log(["clickEvent", event]);
     });
+
+    const header = document.querySelector("head");
+
+    // ADD <style> TAG TO HEADER
+    // const style = document.createElement("style");
+    // style.innerHTML = `
+    // kuc-button {
+    //   --my-background: blue
+    // }
+    // `;
+    // header.append(style);
+
+    // CREATE LINK TO HEADER
+    const linkElement = document.createElement("link");
+    linkElement.setAttribute("rel", "stylesheet");
+    linkElement.setAttribute("type", "text/css");
+    linkElement.setAttribute(
+      "href",
+      "data:text/css;charset=UTF-8," +
+        encodeURIComponent(`kuc-button {
+        --my-background: green;
+        --my-background-active: black
+      }`)
+    );
+    header.append(linkElement);
+
     root.appendChild(normalButton);
     root.appendChild(submitButton);
     root.appendChild(alertButton);
