@@ -12,6 +12,11 @@ export abstract class KucBase extends LitElement {
   // public createRenderRoot() {
   //   return this;
   // }
+  // static shadowRootOptions = {
+  //   ...LitElement.shadowRootOptions,
+  //   delegatesFocus: true,
+  //   mode: "open"
+  // };
 }
 
 export const dispatchCustomEvent = (

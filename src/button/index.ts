@@ -3,6 +3,7 @@ import { property } from "lit/decorators.js";
 import { KucBase, dispatchCustomEvent } from "../base/kuc-base";
 import { visiblePropConverter } from "../base/converter";
 import { validateProps } from "../base/validator";
+import { styleMap } from "lit/directives/style-map.js";
 import "./index.css";
 
 type ButtonProps = {
@@ -27,11 +28,16 @@ export class Button extends KucBase {
     converter: visiblePropConverter
   })
   visible = true;
+  @property({ type: Object }) styles = {};
 
   constructor(props?: ButtonProps) {
     super();
     const validProps = validateProps(props);
     Object.assign(this, validProps);
+  }
+
+  connectedCallback() {
+    console.log(styleMap(this.styles), "check");
   }
 
   private _handleClickButton(event: MouseEvent) {
@@ -57,8 +63,10 @@ export class Button extends KucBase {
         class="kuc-button__button kuc-button__button--${this._getButtonColorType()}"
         ?disabled="${this.disabled}"
         @click="${this._handleClickButton}"
+        style="${styleMap(this.styles)}"
       >
         ${this.text}
+        <span class="kuc-button__span">span ne</span>
       </button>
     `;
   }

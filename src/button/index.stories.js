@@ -8,6 +8,7 @@ storiesOf("desktop/button", module)
       className: "sample-class",
       id: "sample-id",
       visible: true,
+      styles: { backgroundColor: "green" },
       disabled: false
     });
     normalButton.addEventListener("click", event => {
@@ -62,7 +63,7 @@ storiesOf("desktop/button", module)
       "href",
       "data:text/css;charset=UTF-8," +
         encodeURIComponent(`kuc-button {
-        --my-background: green;
+        --my-background: orange;
         --my-background-active: black
       }`)
     );

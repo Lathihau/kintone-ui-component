@@ -45,8 +45,8 @@ kuc-button[hidden] {
 .kuc-button__button--normal:hover,
 .kuc-button__button--normal:focus,
 .kuc-button__button--normal:active {
-  /* background-color: #c8d6dd; */
-/* box-shadow: none;
+  background-color: #c8d6dd;
+  box-shadow: none;
   cursor: pointer;
 }
 .kuc-button__button--submit {
@@ -79,4 +79,4 @@ kuc-button[hidden] {
   box-shadow: none;
   color: #888888;
   cursor: default;
-}  */
+} */
