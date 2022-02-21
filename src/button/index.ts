@@ -36,10 +36,6 @@ export class Button extends KucBase {
     Object.assign(this, validProps);
   }
 
-  connectedCallback() {
-    console.log(styleMap(this.styles), "check");
-  }
-
   private _handleClickButton(event: MouseEvent) {
     event.stopPropagation();
     dispatchCustomEvent(this, "click");
@@ -63,7 +59,6 @@ export class Button extends KucBase {
         class="kuc-button__button kuc-button__button--${this._getButtonColorType()}"
         ?disabled="${this.disabled}"
         @click="${this._handleClickButton}"
-        style="${styleMap(this.styles)}"
       >
         ${this.text}
         <span class="kuc-button__span">span ne</span>
@@ -111,7 +106,7 @@ export class Button extends KucBase {
       color: #3498db;
     }
     .kuc-button__button--normal {
-      background-color: var(--my-background, yellow);
+      background-color: var(--my-background, red);
     }
     .kuc-button__button--normal:hover,
     .kuc-button__button--normal:focus,
