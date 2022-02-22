@@ -37,10 +37,10 @@ kuc-button[hidden] {
   color: #3498db;
 }
 .kuc-button__button--normal {
-  background-color: var(--my-background, yellow);
+  background-color: var(--kuc-button-background, yellow);
 }
 .kuc-button__button--normal:hover {
-  background-color: var(--my-background-active, rgb(207, 18, 176));
+  background-color: var(--kuc-button-background-active, rgb(207, 18, 176));
 }
 .kuc-button__button--normal:hover,
 .kuc-button__button--normal:focus,

@@ -8,6 +8,7 @@ storiesOf("desktop/button", module)
       className: "sample-class",
       id: "sample-id",
       visible: true,
+      text: "Normal",
       styles: { backgroundColor: "green" },
       disabled: false
     });
@@ -47,28 +48,30 @@ storiesOf("desktop/button", module)
     const header = document.querySelector("head");
 
     // ADD <style> TAG TO HEADER
-    // const style = document.createElement("style");
-    // style.innerHTML = `
-    // kuc-button {
-    //   --my-background: blue
-    // }
-    // `;
-    // header.append(style);
+    const style = document.createElement("style");
+    style.innerHTML = `
+    kuc-button {
+      --kuc-button-background: #1976d2;
+      --kuc-button-active-background: #084f95;
+      --kuc-button-text-color: #ffffff;
+    }
+    `;
+    header.append(style);
 
     // CREATE LINK TO HEADER
-    const linkElement = document.createElement("link");
-    linkElement.setAttribute("rel", "stylesheet");
-    linkElement.setAttribute("type", "text/css");
-    linkElement.setAttribute(
-      "href",
-      "data:text/css;charset=UTF-8," +
-        encodeURIComponent(`kuc-button {
-        --my-background: orange;
-        --my-active-background: black;
-        --my-text-color: black;
-      }`)
-    );
-    header.append(linkElement);
+    // const linkElement = document.createElement("link");
+    // linkElement.setAttribute("rel", "stylesheet");
+    // linkElement.setAttribute("type", "text/css");
+    // linkElement.setAttribute(
+    //   "href",
+    //   "data:text/css;charset=UTF-8," +
+    //     encodeURIComponent(`kuc-button {
+    //     --kuc-button-background: orange;
+    //     --kuc-button-active-background: black;
+    //     --kuc-button-text-color: black;
+    //   }`)
+    // );
+    // header.append(linkElement);
 
     root.appendChild(normalButton);
     root.appendChild(submitButton);
