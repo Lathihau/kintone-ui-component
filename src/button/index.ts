@@ -107,11 +107,17 @@ export class Button extends KucBase {
     }
     .kuc-button__button--normal {
       background-color: var(--my-background, red);
+      color: var(--my-text-color, green);
+    }
+    .kuc-button__button--normal:active {
+      background-color: var(--my-active-background, red);
+    }
+    .kuc-button__button--normal:hover {
+      background-color: var(--my-active-background, red);
     }
     .kuc-button__button--normal:hover,
     .kuc-button__button--normal:focus,
     .kuc-button__button--normal:active {
-      background-color: #c8d6dd;
       box-shadow: none;
       cursor: pointer;
     }

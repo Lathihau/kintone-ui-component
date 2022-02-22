@@ -64,7 +64,8 @@ storiesOf("desktop/button", module)
       "data:text/css;charset=UTF-8," +
         encodeURIComponent(`kuc-button {
         --my-background: orange;
-        --my-background-active: black
+        --my-active-background: black;
+        --my-text-color: black;
       }`)
     );
     header.append(linkElement);
